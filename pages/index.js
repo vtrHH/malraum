@@ -172,9 +172,7 @@ export default function Home() {
               statt. Die Teilnehmeranzahl ist auf 6 Personen begrenzt. Online
               können bis zu 10 Personen teilnehmen. Dies bildet einen
               persönlichen & gemütlichen Rahmen, bei dem jeder seine persönliche
-              Kreativität frei ausleben kann. Die aktuellen Workshops und Kurse
-              finden Sie unter AKTUELLES (Verlinkung zum Blockbeitrag der
-              Workshoptermine)
+              Kreativität frei ausleben kann.
             </Typography>
             <Typography
               variant="body1"
