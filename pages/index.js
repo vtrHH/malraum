@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Main.module.css';
 
+import Footer from '../components/Footer';
+
 import {
   ImageList,
   ImageListItem,
@@ -15,7 +17,7 @@ import {
 
 import lo from '../public/images/links_oben.jpg';
 import ro from '../public/images/rechts_oben.jpg';
-import lu from '../public/images/links_unten.jpg';
+import lu from '../public/images/links_unten.JPG';
 import ru from '../public/images/rechts_unten.jpg';
 import logo from '../public/images/Anja_Maisch_Logo_CMYK_quer_neu.png';
 
