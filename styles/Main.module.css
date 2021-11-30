@@ -24,7 +24,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #077682;
   text-align: center;
 }
@@ -55,3 +55,4 @@
 .link:hover {
   text-decoration: underline;
 }
+

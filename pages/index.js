@@ -227,7 +227,7 @@ export default function Home() {
               malraum@anjamaisch.de
             </Typography>
             <br />
-            <Link href="/impressum">
+            <Link href="/impressum-datenschutz">
               <a className={styles.link}>Impressum & Datenschutz</a>
             </Link>
             <br />
@@ -238,11 +238,16 @@ export default function Home() {
               Lernen Sie mehr über meine Arbeit neben dem MALraum auf
             </Typography>
             <br />
-            <Link href="https://anja-maisch.netlify.app/">
-              <a>
-                <Image src={logo} height={45} width={230} alt="AnjaMaisch" />
-              </a>
-            </Link>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Link
+                href="https://anja-maisch.netlify.app/"
+                className={styles.footerLink}
+              >
+                <a target="_blank" rel="noopener">
+                  <Image src={logo} height={45} width={230} alt="AnjaMaisch" />
+                </a>
+              </Link>
+            </Box>
           </Grid>
         </Grid>
       </footer>
