@@ -92,37 +92,66 @@ export default function Impressum() {
       </main>
 
       <footer className={styles.footer}>
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} sm={12} md={12} lg={4}>
-            <Typography variant="body1" color="#077682">
-              MALraum | Anja Maisch <br />
-              Johannesstraße 23, 70176 Stuttgart <br />
-              malraum@anjamaisch.de
-            </Typography>
-            <br />
+        {isMobile ? (
+          <Box className={styles.mobileFooter}>
             <Link href="/">
               <a className={styles.link}>Zurück zur Homepage</a>
             </Link>
             <br />
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={4}></Grid>
-          <Grid item xs={12} sm={12} md={12} lg={4}>
+            <br />
+            <Typography variant="body1" color="#077682">
+              MALraum | Anja Maisch Johannesstraße 23, 70176 Stuttgart
+              malraum@anjamaisch.de
+            </Typography>
+            <br />
             <Typography variant="body1" color="#077682">
               Lernen Sie mehr über meine Arbeit neben dem MALraum auf
             </Typography>
             <br />
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Link
-                href="https://anja-maisch.netlify.app/"
-                className={styles.footerLink}
-              >
-                <a target="_blank" rel="noopener">
-                  <Image src={logo} height={45} width={230} alt="AnjaMaisch" />
-                </a>
+            <Link href="https://anja-maisch.netlify.app/">
+              <a target="_blank" rel="noopener">
+                <Image src={logo} height={45} width={230} alt="AnjaMaisch" />
+              </a>
+            </Link>
+          </Box>
+        ) : (
+          <Grid container spacing={2} alignItems="center">
+            <Grid item xs={12} sm={12} md={12} lg={4}>
+              <Typography variant="body1" color="#077682">
+                MALraum | Anja Maisch <br />
+                Johannesstraße 23, 70176 Stuttgart <br />
+                malraum@anjamaisch.de
+              </Typography>
+              <br />
+              <Link href="/">
+                <a className={styles.link}>Zurück zur Homepage</a>
               </Link>
-            </Box>
+              <br />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={4}></Grid>
+            <Grid item xs={12} sm={12} md={12} lg={4}>
+              <Typography variant="body1" color="#077682">
+                Lernen Sie mehr über meine Arbeit neben dem MALraum auf
+              </Typography>
+              <br />
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Link
+                  href="https://anja-maisch.netlify.app/"
+                  className={styles.footerLink}
+                >
+                  <a target="_blank" rel="noopener">
+                    <Image
+                      src={logo}
+                      height={45}
+                      width={230}
+                      alt="AnjaMaisch"
+                    />
+                  </a>
+                </Link>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
+        )}
       </footer>
     </div>
   );

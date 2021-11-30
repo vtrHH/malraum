@@ -136,8 +136,13 @@ export default function Home() {
               und zu einem ganzheitlich entspannenden und erfrischenden
               Lösungsweg führen, der nachhaltig seine Kraft im Alltag entfaltet.
               Hierbei benötigen Sie keinerlei Vorerfahrung, da alles intuitiv
-              geschieht: Verlinkung zum Blogartikel: Einfach MAL intuitiv!
-              Heilsames kreatives Malen einfach erklärt
+              geschieht:{' '}
+              <Link href="https://anja-maisch.netlify.app/artikel/61a651778e008700224c327b">
+                <a target="_blank" rel="noopener" className={styles.inlineLink}>
+                  Einfach MAL intuitiv! Heilsames kreatives Malen einfach
+                  erklärt
+                </a>
+              </Link>
             </Typography>
             <Typography
               variant="body1"
