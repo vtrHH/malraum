@@ -47,6 +47,9 @@ export default function Impressum() {
         <Typography variant="body1" color="#4d4d4d" gutterBottom>
           E-Mail: malraum@anjamaisch.de
         </Typography>
+        <Typography variant="body1" color="#4d4d4d" gutterBottom>
+          USt-IdNr: DE341331892
+        </Typography>
         <br />
         <Typography variant="h6" color="#077682" gutterBottom>
           Datenschutz
@@ -56,7 +59,8 @@ export default function Impressum() {
           color="#4d4d4d"
           gutterBottom
           style={{ textAlign: 'center' }}
-        d>
+          d
+        >
           Verantwortlich für die Datenverarbeitung auf dieser Website ist Anja
           Maisch – Kontaktdaten siehe oben.
         </Typography>

@@ -155,10 +155,10 @@ export default function Home() {
               Ich vermiete meinen MALraum inklusive Material (ausgenommen
               großflächige Leinwände) nach terminlicher Absprache. Auf Wunsch
               gibt es vorab eine kleine Materialkunde. Danach sind Sie ganz
-              alleine mit sich, den Farben und Ihrer Kreativität. Tauchen Sie
-              ein, in Ihre einzigartig bunte Innenwelt der Gefühle. Eine
-              wunderbare Methode sich wieder zu finden, sich zu spüren und den
-              „Kopf mal auszuschalten“.
+              alleine mit sich, den Farben und Ihrer Kreativität in Verbindung.
+              Tauchen Sie ein, in Ihre einzigartig bunte Innenwelt der Gefühle.
+              Eine wunderbare Methode sich wieder zu finden, sich zu spüren und
+              den „Kopf mal auszuschalten“.
             </Typography>
             <Typography
               variant="body1"
