@@ -1,0 +1,57 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  color: #077682;
+  text-align: center;
+}
+
+.text {
+  text-align: left;
+}
+
+.quote {
+  text-align: center;
+  width: 90%;
+  padding-left: 2.75em;
+}
+
+.textHighlight {
+  color: #077682;
+}
+.logo {
+  height: 45px;
+  object-fit: cover;
+}
+
+.link {
+  color: #077682;
+  padding: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
