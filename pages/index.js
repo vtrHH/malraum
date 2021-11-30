@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Willkommen beim MALraum Stuttgart</h1>
+        <h1 className={styles.title}>Willkommen im MALraum Stuttgart</h1>
         <Grid container spacing={0} sx={{ marginTop: '2em' }}>
           <Grid item xs={12} sm={12} md={12} lg={7}>
             {isMobile ? (
