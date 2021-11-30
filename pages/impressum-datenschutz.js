@@ -18,7 +18,7 @@ import logo from '../public/images/Anja_Maisch_Logo_CMYK_quer_neu.png';
 export default function Impressum() {
   // Responsiveness
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <div className={styles.container}>
@@ -51,7 +51,12 @@ export default function Impressum() {
         <Typography variant="h6" color="#077682" gutterBottom>
           Datenschutz
         </Typography>
-        <Typography variant="body1" color="#4d4d4d" gutterBottom>
+        <Typography
+          variant="body1"
+          color="#4d4d4d"
+          gutterBottom
+          style={{ textAlign: 'center' }}
+        d>
           Verantwortlich für die Datenverarbeitung auf dieser Website ist Anja
           Maisch – Kontaktdaten siehe oben.
         </Typography>
@@ -59,7 +64,12 @@ export default function Impressum() {
         <Typography variant="h6" color="#077682" gutterBottom>
           Information zur Datenverarbeitung
         </Typography>
-        <Typography variant="body1" color="#4d4d4d" gutterBottom>
+        <Typography
+          variant="body1"
+          color="#4d4d4d"
+          gutterBottom
+          style={{ textAlign: 'center' }}
+        >
           Der Hosting-Provider dieser Website erhebt und speichert automatisch
           einige nicht personenbezogene Daten in den sogenannten
           Server-Logfiles. Diese übermittelt Ihr Browser automatisch und sind
@@ -99,12 +109,23 @@ export default function Impressum() {
             </Link>
             <br />
             <br />
-            <Typography variant="body1" color="#077682">
-              MALraum | Anja Maisch Johannesstraße 23, 70176 Stuttgart
+            <Typography
+              variant="body1"
+              color="#077682"
+              className={styles.textFooterMobile}
+              gutterBottom
+            >
+              MALraum | Anja Maisch, Johannesstraße 23, 70176 Stuttgart
+            </Typography>
+            <Typography variant="body1" color="#077682" gutterBottom>
               malraum@anjamaisch.de
             </Typography>
             <br />
-            <Typography variant="body1" color="#077682">
+            <Typography
+              variant="body1"
+              color="#077682"
+              className={styles.textFooterMobile}
+            >
               Lernen Sie mehr über meine Arbeit neben dem MALraum auf
             </Typography>
             <br />

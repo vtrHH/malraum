@@ -48,6 +48,11 @@
 .textHighlight {
   color: #077682;
 }
+
+.textFooterMobile {
+  text-align: center;
+}
+
 .logo {
   height: 45px;
   object-fit: cover;
@@ -55,6 +60,7 @@
 
 .link {
   color: #077682;
+  font-weight: 700;
   padding: 0;
 }
 

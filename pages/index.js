@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Main.module.css';
 
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 import {
   ImageList,
@@ -20,11 +20,12 @@ import ro from '../public/images/rechts_oben.jpg';
 import lu from '../public/images/links_unten.JPG';
 import ru from '../public/images/rechts_unten.jpg';
 import logo from '../public/images/Anja_Maisch_Logo_CMYK_quer_neu.png';
+import malraum from '../public/images/Malraum.jpg';
 
 export default function Home() {
   // Responsiveness
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <div className={styles.container}>
@@ -40,71 +41,33 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Willkommen im MALraum Stuttgart</h1>
-        <Grid container spacing={0} sx={{ marginTop: '2em' }}>
+        <Grid container spacing={4} sx={{ marginTop: '2em' }}>
           <Grid item xs={12} sm={12} md={12} lg={7}>
-            {isMobile ? (
-              <>
-                <ImageList
-                  sx={{ width: '98%', height: 335 }}
-                  cols={2}
-                  rows={2}
-                  rowHeight={164}
-                >
-                  <ImageListItem>
-                    <Image src={lo} alt="Malraum" />
-                  </ImageListItem>
-                  <ImageListItem>
-                    <Image src={ro} alt="Malraum" />
-                  </ImageListItem>
-                  <ImageListItem>
-                    <Image src={lu} alt="Malraum" />
-                  </ImageListItem>
-                  <ImageListItem>
-                    <Image src={ru} alt="Malraum" />
-                  </ImageListItem>
-                </ImageList>
-                <Box className={styles.quote}>
-                  <Typography variant="h6" color="#4d4d4d" gutterBottom>
-                    »Man kann einen Menschen nichts lehren. Man kann ihm nur
-                    helfen, es in sich selbst zu entdecken.«
-                  </Typography>
-                  <Typography variant="body1" color="#4d4d4d" gutterBottom>
-                    (​Galileo Galilei)
-                  </Typography>
-                </Box>
-              </>
-            ) : (
-              <>
-                <ImageList
-                  sx={{ width: 700, height: 505, marginLeft: '2em' }}
-                  cols={2}
-                  rows={2}
-                  rowHeight={250}
-                >
-                  <ImageListItem>
-                    <Image src={lo} alt="Malraum" />
-                  </ImageListItem>
-                  <ImageListItem>
-                    <Image src={ro} alt="Malraum" />
-                  </ImageListItem>
-                  <ImageListItem>
-                    <Image src={lu} alt="Malraum" />
-                  </ImageListItem>
-                  <ImageListItem>
-                    <Image src={ru} alt="Malraum" />
-                  </ImageListItem>
-                </ImageList>
-                <Box className={styles.quote}>
-                  <Typography variant="h6" color="#4d4d4d" gutterBottom>
-                    »Man kann einen Menschen nichts lehren. Man kann ihm nur
-                    helfen, es in sich selbst zu entdecken.«
-                  </Typography>
-                  <Typography variant="body1" color="#4d4d4d" gutterBottom>
-                    (​Galileo Galilei)
-                  </Typography>
-                </Box>
-              </>
-            )}
+            <Image src={malraum} alt="Malraum" />
+            <br />
+            <br />
+            <br />
+            <Typography
+              variant="h6"
+              color="#4d4d4d"
+              style={{
+                textAlign: 'center',
+                paddingLeft: '2em',
+                paddingRight: '2em'
+              }}
+              gutterBottom
+            >
+              »Man kann einen Menschen nichts lehren. Man kann ihm nur helfen,
+              es in sich selbst zu entdecken.«
+            </Typography>
+            <Typography
+              variant="body1"
+              color="#4d4d4d"
+              gutterBottom
+              style={{ textAlign: 'center' }}
+            >
+              (​Galileo Galilei)
+            </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={5} sx={{ mt: '1em' }}>
             <Typography
@@ -224,37 +187,77 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} sm={12} md={12} lg={4}>
-            <Typography variant="body1" color="#077682">
-              MALraum | Anja Maisch <br />
-              Johannesstraße 23, 70176 Stuttgart <br />
+        {isMobile ? (
+          <Box className={styles.mobileFooter}>
+            <Link href="/">
+              <a className={styles.link}>Zurück zur Homepage</a>
+            </Link>
+            <br />
+            <br />
+            <Typography
+              variant="body1"
+              color="#077682"
+              className={styles.textFooterMobile}
+              gutterBottom
+            >
+              MALraum | Anja Maisch, Johannesstraße 23, 70176 Stuttgart
+            </Typography>
+            <Typography variant="body1" color="#077682" gutterBottom>
               malraum@anjamaisch.de
             </Typography>
             <br />
-            <Link href="/impressum-datenschutz">
-              <a className={styles.link}>Impressum & Datenschutz</a>
-            </Link>
-            <br />
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={4}></Grid>
-          <Grid item xs={12} sm={12} md={12} lg={4}>
-            <Typography variant="body1" color="#077682">
+            <Typography
+              variant="body1"
+              color="#077682"
+              className={styles.textFooterMobile}
+            >
               Lernen Sie mehr über meine Arbeit neben dem MALraum auf
             </Typography>
             <br />
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Link
-                href="https://anja-maisch.netlify.app/"
-                className={styles.footerLink}
-              >
-                <a target="_blank" rel="noopener">
-                  <Image src={logo} height={45} width={230} alt="AnjaMaisch" />
-                </a>
+            <Link href="https://anja-maisch.netlify.app/">
+              <a target="_blank" rel="noopener">
+                <Image src={logo} height={45} width={230} alt="AnjaMaisch" />
+              </a>
+            </Link>
+          </Box>
+        ) : (
+          <Grid container spacing={2} alignItems="center">
+            <Grid item xs={12} sm={12} md={12} lg={4}>
+              <Typography variant="body1" color="#077682">
+                MALraum | Anja Maisch <br />
+                Johannesstraße 23, 70176 Stuttgart <br />
+                malraum@anjamaisch.de
+              </Typography>
+              <br />
+              <Link href="/impressum-datenschutz">
+                <a className={styles.link}>Impressum & Datenschutz</a>
               </Link>
-            </Box>
+              <br />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={4}></Grid>
+            <Grid item xs={12} sm={12} md={12} lg={4}>
+              <Typography variant="body1" color="#077682">
+                Lernen Sie mehr über meine Arbeit neben dem MALraum auf
+              </Typography>
+              <br />
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Link
+                  href="https://anja-maisch.netlify.app/"
+                  className={styles.footerLink}
+                >
+                  <a target="_blank" rel="noopener">
+                    <Image
+                      src={logo}
+                      height={45}
+                      width={230}
+                      alt="AnjaMaisch"
+                    />
+                  </a>
+                </Link>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
+        )}
       </footer>
     </div>
   );
